@@ -1,7 +1,6 @@
 import {useState} from "react";
 import {useAuth0} from "@auth0/auth0-react";
 
-
 const UserLogin = () => {
 
     const [emailId, setEmailId] = useState('');
@@ -29,14 +28,25 @@ const UserLogin = () => {
                                     Login
                                 </button>}
                             </div>
-
                             <div className="d-grid gap-2 mt-3">
-                                {isAuthenticated && (<button
-                                    type="submit"
-                                    className="btn btn-dark"
-                                    onClick={() => logout({logoutParams: {returnTo: window.location.origin}})}>
-                                    Logout
-                                </button>)}
+                                {isAuthenticated && (
+                                    <>
+                                        <button
+                                            className="btn btn-dark"
+                                            onClick={() => navigate("/form")}>
+                                            Fill Survey Form
+                                        </button>
+
+                                        <button
+                                            type="submit"
+                                            className="btn btn-dark"
+                                            onClick={() => logout(
+                                                {logoutParams: {returnTo: window.location.origin}})}>
+                                            Logout
+                                        </button>
+                                    </>
+
+                                )}
                             </div>
                         </>)}
                 </div>
