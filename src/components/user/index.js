@@ -43,6 +43,19 @@ const UserForm = () => {
 
     const handleSubmit = async () => {
 
+        if (firstName === undefined || lastName === undefined || firstName === "" || lastName === "") {
+            alert("Please enter Full Name")
+        } else if (emailId === undefined || emailId === "") {
+            alert("Please enter your Email Id")
+        } else if (phoneNumber === undefined || phoneNumber === "") {
+            alert("Please enter your Phone Number")
+        } else if (gender === undefined || gender === "") {
+            alert("Please select Gender")
+        } else if (dob === undefined || dob === "") {
+            alert("Please enter your Date of Birth")
+        } else if (address === undefined || address === "") {
+            alert("Please enter your Address")
+        }
         console.log("gender -> ", gender);
         console.log("here")
         const user = {firstName, lastName, emailId, phoneNumber, gender, dob, address, language, education}

@@ -66,7 +66,7 @@ const AdminHome = () => {
                             <tr>
                                 <td>{info.firstName} {info.lastName}</td>
                                 <td>{info.emailId}</td>
-                                <td>{info.phoneNo}</td>
+                                <td>{info.phoneNumber}</td>
                                 <td>{info.gender}</td>
                                 <td>{info.dob.split("T")[0]}</td>
                                 <td>{info.language?.map((l) => (
